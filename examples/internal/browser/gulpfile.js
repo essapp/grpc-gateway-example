@@ -5,7 +5,7 @@ const { stat, readFile } = require('fs/promises');
 const { H3, handleCors, serve, serveStatic } = require('h3');
 
 const buildGS = () => {
-  const cmd = 'echo $http_proxy';
+  const cmd = 'go build -o bin/example-gs ../cmd/example-grpc-server';
   return exec(cmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`Clean failed: ${error}`);
@@ -16,7 +16,7 @@ const buildGS = () => {
 }
 
 const buildGW = () => {
-  const cmd = 'go build -o bin/example-gw examples/internal/cmd/example-gateway-server';
+  const cmd = 'go build -o bin/example-gw ../cmd/example-gateway-server';
   return exec(cmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`Clean failed: ${error}`);
@@ -27,7 +27,7 @@ const buildGW = () => {
 }
 
 const runGS = (done) => {
-  const gs = spawn('bin/example-server', [], { stdio: 'inherit' });
+  const gs = spawn('bin/example-gs', [], { stdio: 'inherit' });
   process.on('exit', () => {
     gs.kill();
   });
