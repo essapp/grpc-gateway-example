@@ -1,0 +1,6 @@
+_output/
+.idea
+.vscode
+
+# Go vendor directory
+vendor

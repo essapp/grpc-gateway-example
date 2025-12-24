@@ -1165,7 +1165,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcEmptyRpc", runtime.WithHTTPPathPattern("/rpc/empty/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcEmptyRpc", runtime.WithHTTPPathPattern("/rpc/empty/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1206,7 +1206,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1226,7 +1226,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/path/{a}/{b}/{c}/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/path/{a}/{b}/{c}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1246,7 +1246,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/query/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/query/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1266,7 +1266,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/{b}/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/{b}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1286,7 +1286,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/query/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/query/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1306,7 +1306,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/query/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/query/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1326,7 +1326,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/path/{a}/query/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/path/{a}/query/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1346,7 +1346,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathSingleNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathSingleNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1366,7 +1366,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/{b}/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/{b}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1386,7 +1386,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested1/{a.str}/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested1/{a.str}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1406,7 +1406,7 @@ func RegisterFlowCombinationHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested2/{a.str}/rpc"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested2/{a.str}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1541,7 +1541,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcEmptyRpc", runtime.WithHTTPPathPattern("/rpc/empty/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcEmptyRpc", runtime.WithHTTPPathPattern("/rpc/empty/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1558,7 +1558,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcEmptyStream", runtime.WithHTTPPathPattern("/rpc/empty/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcEmptyStream", runtime.WithHTTPPathPattern("/rpc/empty/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1575,7 +1575,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/StreamEmptyRpc", runtime.WithHTTPPathPattern("/stream/empty/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/StreamEmptyRpc", runtime.WithHTTPPathPattern("/stream/empty/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1592,7 +1592,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/StreamEmptyStream", runtime.WithHTTPPathPattern("/stream/empty/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/StreamEmptyStream", runtime.WithHTTPPathPattern("/stream/empty/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1609,7 +1609,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1626,7 +1626,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/path/{a}/{b}/{c}/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/path/{a}/{b}/{c}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1643,7 +1643,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/query/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/query/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1660,7 +1660,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/{b}/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/{b}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1677,7 +1677,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/query/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/query/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1694,7 +1694,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/query/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/query/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1711,7 +1711,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/path/{a}/query/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc", runtime.WithHTTPPathPattern("/rpc/path/{a}/query/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1728,7 +1728,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathSingleNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathSingleNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1745,7 +1745,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/{b}/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/{b}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1762,7 +1762,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested1/{a.str}/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested1/{a.str}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1779,7 +1779,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested2/{a.str}/rpc"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc", runtime.WithHTTPPathPattern("/rpc/path-nested2/{a.str}/rpc"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1796,7 +1796,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/body/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/body/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1813,7 +1813,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/path/{a}/{b}/{c}/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/path/{a}/{b}/{c}/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1830,7 +1830,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/query/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/query/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1847,7 +1847,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/{b}/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/{b}/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1864,7 +1864,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/body/query/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/body/query/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1881,7 +1881,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/query/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/body/path/{a}/query/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1898,7 +1898,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/path/{a}/query/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcBodyStream", runtime.WithHTTPPathPattern("/rpc/path/{a}/query/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1915,7 +1915,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathSingleNestedStream", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathSingleNestedStream", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1932,7 +1932,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedStream", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/{b}/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedStream", runtime.WithHTTPPathPattern("/rpc/path-nested/{a.str}/{b}/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1949,7 +1949,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedStream", runtime.WithHTTPPathPattern("/rpc/path-nested1/{a.str}/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedStream", runtime.WithHTTPPathPattern("/rpc/path-nested1/{a.str}/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1966,7 +1966,7 @@ func RegisterFlowCombinationHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedStream", runtime.WithHTTPPathPattern("/rpc/path-nested2/{a.str}/stream"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FlowCombination/RpcPathNestedStream", runtime.WithHTTPPathPattern("/rpc/path-nested2/{a.str}/stream"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return

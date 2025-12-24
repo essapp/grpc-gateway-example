@@ -1,8 +1,8 @@
 package abe
 
 import (
-	pbexamplepb "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/examplepb"
-	pbpathenum "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/pathenum"
+	pbexamplepb "github.com/essapp/grpc-gateway-example/v2/examples/internal/proto/examplepb"
+	pbpathenum "github.com/essapp/grpc-gateway-example/v2/examples/internal/proto/pathenum"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 )
 

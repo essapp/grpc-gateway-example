@@ -346,7 +346,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/Create", runtime.WithHTTPPathPattern("/v1/example/wrappers"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/Create", runtime.WithHTTPPathPattern("/v1/example/wrappers"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -366,7 +366,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateStringValue", runtime.WithHTTPPathPattern("/v1/testString"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateStringValue", runtime.WithHTTPPathPattern("/v1/testString"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -386,7 +386,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateInt32Value", runtime.WithHTTPPathPattern("/v1/testInt32"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateInt32Value", runtime.WithHTTPPathPattern("/v1/testInt32"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -406,7 +406,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateInt64Value", runtime.WithHTTPPathPattern("/v1/testInt64"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateInt64Value", runtime.WithHTTPPathPattern("/v1/testInt64"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -426,7 +426,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateFloatValue", runtime.WithHTTPPathPattern("/v1/testFloat"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateFloatValue", runtime.WithHTTPPathPattern("/v1/testFloat"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -446,7 +446,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateDoubleValue", runtime.WithHTTPPathPattern("/v1/testDouble"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateDoubleValue", runtime.WithHTTPPathPattern("/v1/testDouble"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -466,7 +466,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateBoolValue", runtime.WithHTTPPathPattern("/v1/testBool"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateBoolValue", runtime.WithHTTPPathPattern("/v1/testBool"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -486,7 +486,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateUInt32Value", runtime.WithHTTPPathPattern("/v1/testUint32"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateUInt32Value", runtime.WithHTTPPathPattern("/v1/testUint32"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -506,7 +506,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateUInt64Value", runtime.WithHTTPPathPattern("/v1/testUint64"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateUInt64Value", runtime.WithHTTPPathPattern("/v1/testUint64"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -526,7 +526,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateBytesValue", runtime.WithHTTPPathPattern("/v1/testBytes"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateBytesValue", runtime.WithHTTPPathPattern("/v1/testBytes"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -546,7 +546,7 @@ func RegisterWrappersServiceHandlerServer(ctx context.Context, mux *runtime.Serv
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateEmpty", runtime.WithHTTPPathPattern("/v1/testEmpty"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateEmpty", runtime.WithHTTPPathPattern("/v1/testEmpty"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -604,7 +604,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/Create", runtime.WithHTTPPathPattern("/v1/example/wrappers"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/Create", runtime.WithHTTPPathPattern("/v1/example/wrappers"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -621,7 +621,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateStringValue", runtime.WithHTTPPathPattern("/v1/testString"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateStringValue", runtime.WithHTTPPathPattern("/v1/testString"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -638,7 +638,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateInt32Value", runtime.WithHTTPPathPattern("/v1/testInt32"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateInt32Value", runtime.WithHTTPPathPattern("/v1/testInt32"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -655,7 +655,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateInt64Value", runtime.WithHTTPPathPattern("/v1/testInt64"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateInt64Value", runtime.WithHTTPPathPattern("/v1/testInt64"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -672,7 +672,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateFloatValue", runtime.WithHTTPPathPattern("/v1/testFloat"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateFloatValue", runtime.WithHTTPPathPattern("/v1/testFloat"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -689,7 +689,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateDoubleValue", runtime.WithHTTPPathPattern("/v1/testDouble"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateDoubleValue", runtime.WithHTTPPathPattern("/v1/testDouble"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -706,7 +706,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateBoolValue", runtime.WithHTTPPathPattern("/v1/testBool"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateBoolValue", runtime.WithHTTPPathPattern("/v1/testBool"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -723,7 +723,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateUInt32Value", runtime.WithHTTPPathPattern("/v1/testUint32"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateUInt32Value", runtime.WithHTTPPathPattern("/v1/testUint32"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -740,7 +740,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateUInt64Value", runtime.WithHTTPPathPattern("/v1/testUint64"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateUInt64Value", runtime.WithHTTPPathPattern("/v1/testUint64"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -757,7 +757,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateBytesValue", runtime.WithHTTPPathPattern("/v1/testBytes"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateBytesValue", runtime.WithHTTPPathPattern("/v1/testBytes"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -774,7 +774,7 @@ func RegisterWrappersServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateEmpty", runtime.WithHTTPPathPattern("/v1/testEmpty"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.WrappersService/CreateEmpty", runtime.WithHTTPPathPattern("/v1/testEmpty"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return

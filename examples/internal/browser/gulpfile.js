@@ -5,7 +5,7 @@ const { stat, readFile } = require('fs/promises');
 const { H3, handleCors, serve, serveStatic } = require('h3');
 
 const buildGS = () => {
-  const cmd = 'go build -o bin/example-server github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/cmd/example-grpc-server';
+  const cmd = 'go build -o bin/example-server github.com/essapp/grpc-gateway-example/v2/examples/internal/cmd/example-grpc-server';
   return exec(cmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`Clean failed: ${error}`);
@@ -16,7 +16,7 @@ const buildGS = () => {
 }
 
 const buildGW = () => {
-  const cmd = 'go build -o bin/example-gw github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/cmd/example-gateway-server';
+  const cmd = 'go build -o bin/example-gw github.com/essapp/grpc-gateway-example/v2/examples/internal/cmd/example-gateway-server';
   return exec(cmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`Clean failed: ${error}`);
@@ -68,4 +68,5 @@ const server = (done) => {
   return done();
 }
 
+exports.buildGS = buildGS;
 exports.default = series(parallel(buildGS, buildGW), runGS, runGW, server);

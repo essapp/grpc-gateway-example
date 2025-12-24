@@ -50,11 +50,10 @@ func request_OpaqueEcommerceService_OpaqueGetProduct_0(ctx context.Context, mars
 	if !ok {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "product_id")
 	}
-	convertedProductId, err := runtime.String(val)
+	protoReq.ProductId, err = runtime.String(val)
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "product_id", err)
 	}
-	protoReq.SetProductId(convertedProductId)
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
@@ -75,11 +74,10 @@ func local_request_OpaqueEcommerceService_OpaqueGetProduct_0(ctx context.Context
 	if !ok {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "product_id")
 	}
-	convertedProductId, err := runtime.String(val)
+	protoReq.ProductId, err = runtime.String(val)
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "product_id", err)
 	}
-	protoReq.SetProductId(convertedProductId)
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
@@ -214,7 +212,7 @@ func RegisterOpaqueEcommerceServiceHandlerServer(ctx context.Context, mux *runti
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueGetProduct", runtime.WithHTTPPathPattern("/v1/products/{product_id}"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueGetProduct", runtime.WithHTTPPathPattern("/v1/products/{product_id}"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -293,7 +291,7 @@ func RegisterOpaqueEcommerceServiceHandlerClient(ctx context.Context, mux *runti
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueGetProduct", runtime.WithHTTPPathPattern("/v1/products/{product_id}"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueGetProduct", runtime.WithHTTPPathPattern("/v1/products/{product_id}"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -310,7 +308,7 @@ func RegisterOpaqueEcommerceServiceHandlerClient(ctx context.Context, mux *runti
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueSearchProducts", runtime.WithHTTPPathPattern("/v1/products/search"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueSearchProducts", runtime.WithHTTPPathPattern("/v1/products/search"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -327,7 +325,7 @@ func RegisterOpaqueEcommerceServiceHandlerClient(ctx context.Context, mux *runti
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueProcessOrders", runtime.WithHTTPPathPattern("/v1/orders/process"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueProcessOrders", runtime.WithHTTPPathPattern("/v1/orders/process"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -344,7 +342,7 @@ func RegisterOpaqueEcommerceServiceHandlerClient(ctx context.Context, mux *runti
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueStreamCustomerActivity", runtime.WithHTTPPathPattern("/v1/customer/activity"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.OpaqueEcommerceService/OpaqueStreamCustomerActivity", runtime.WithHTTPPathPattern("/v1/customer/activity"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return

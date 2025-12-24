@@ -74,7 +74,7 @@ func RegisterFooServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FooService/Foo", runtime.WithHTTPPathPattern("/v1/example/foo"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/examples.internal.proto.examplepb.FooService/Foo", runtime.WithHTTPPathPattern("/v1/example/foo"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -132,7 +132,7 @@ func RegisterFooServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/grpc.gateway.examples.internal.proto.examplepb.FooService/Foo", runtime.WithHTTPPathPattern("/v1/example/foo"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/examples.internal.proto.examplepb.FooService/Foo", runtime.WithHTTPPathPattern("/v1/example/foo"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
