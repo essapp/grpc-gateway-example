@@ -5,7 +5,7 @@ const { stat, readFile } = require('fs/promises');
 const { H3, handleCors, serve, serveStatic } = require('h3');
 
 const buildGS = () => {
-  const cmd = 'echo $http_proxy';
+  const cmd = 'go build -o bin/example-server github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/cmd/example-grpc-server';
   return exec(cmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`Clean failed: ${error}`);
@@ -16,7 +16,7 @@ const buildGS = () => {
 }
 
 const buildGW = () => {
-  const cmd = 'go build -o bin/example-gw examples/internal/cmd/example-gateway-server';
+  const cmd = 'go build -o bin/example-gw github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/cmd/example-gateway-server';
   return exec(cmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`Clean failed: ${error}`);
@@ -26,25 +26,25 @@ const buildGW = () => {
   });
 }
 
-const runGS = (done) => {
-  const gs = spawn('bin/example-server', [], { stdio: 'inherit' });
+const runGS = (done, cb) => {
+  const gs = spawn('bin/example-server', [], { stdio: 'inherit' }, cb);
   process.on('exit', () => {
     gs.kill();
   });
-  return done();
+  done();
 }
 
-const runGW = (done) => {
-  const gw = spawn('bin/example-gw', ['--openapi_dir', join(__dirname, "../proto/examplepb"),], { stdio: 'inherit' });
+const runGW = (done, cb) => {
+  const gw = spawn('bin/example-gw', ['--openapi_dir', join(__dirname, "../proto/examplepb"),], { stdio: 'inherit' }, cb);
   process.on('exit', () => {
     gw.kill();
   });
-  return done();
+  done();
 }
 
 const server = (done) => {
   const app = new H3({ debug: true });
-  serve(
+  return serve(
     app.all('/**', (event) => {
       if (handleCors(event, { origin: "*" })) {
         return;
@@ -65,8 +65,6 @@ const server = (done) => {
     }
     )
   );
-  return done();
 }
 
-exports.buildGS = buildGS;
 exports.default = series(parallel(buildGS, buildGW), runGS, runGW, server);

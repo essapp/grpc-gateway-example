@@ -5,8 +5,8 @@ import (
 	"net"
 	"net/http"
 
-	examples "github.com/essapp/grpc-gateway-example/v2/examples/internal/proto/examplepb"
-	standalone "github.com/essapp/grpc-gateway-example/v2/examples/internal/proto/standalone"
+	examples "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/examplepb"
+	standalone "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/standalone"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"

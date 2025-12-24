@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	examples "github.com/essapp/grpc-gateway-example/v2/examples/internal/proto/examplepb"
+	examples "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/examplepb"
 )
 
 type flowCombinationServer struct{}
