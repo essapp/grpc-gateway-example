@@ -26,25 +26,25 @@ const buildGW = () => {
   });
 }
 
-const runGS = (done, cb) => {
-  const gs = spawn('bin/example-server', [], { stdio: 'inherit' }, cb);
+const runGS = (done) => {
+  const gs = spawn('bin/example-server', [], { stdio: 'inherit' });
   process.on('exit', () => {
     gs.kill();
   });
-  done();
+  return done();
 }
 
-const runGW = (done, cb) => {
-  const gw = spawn('bin/example-gw', ['--openapi_dir', join(__dirname, "../proto/examplepb"),], { stdio: 'inherit' }, cb);
+const runGW = (done) => {
+  const gw = spawn('bin/example-gw', ['--openapi_dir', join(__dirname, "../proto/examplepb"),], { stdio: 'inherit' });
   process.on('exit', () => {
     gw.kill();
   });
-  done();
+  return done();
 }
 
 const server = (done) => {
   const app = new H3({ debug: true });
-  return serve(
+  serve(
     app.all('/**', (event) => {
       if (handleCors(event, { origin: "*" })) {
         return;
@@ -65,6 +65,8 @@ const server = (done) => {
     }
     )
   );
+
+  return done();
 }
 
 exports.default = series(parallel(buildGS, buildGW), runGS, runGW, server);
