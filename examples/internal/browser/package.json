@@ -1,0 +1,16 @@
+{
+  "name": "grpc-gateway-example",
+  "version": "2.0.0",
+  "description": "Example use of gRPC-Gateway from browser",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "SEE LICENSE",
+  "packageManager": "pnpm@10.26.1",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "h3": "2.0.1-rc.6",
+    "swagger-ui-dist": "^5.31.0"
+  }
+}
